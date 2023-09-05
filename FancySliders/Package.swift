@@ -4,27 +4,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "xxPROJECTxNAMExx",
+    name: "FancySliders",
     platforms: [
         .macOS(.v10_12),
-        .iOS(.v10),
+        .iOS(.v15),
         .tvOS(.v10),
         .watchOS(.v3)
     ],
     products: [
         .library(
-            name: "xxPROJECTxNAMExx",
-            targets: ["xxPROJECTxNAMExx"]
+            name: "FancySliders",
+            targets: ["FancySliders"]
         )
     ],
     targets: [
         .target(
-            name: "xxPROJECTxNAMExx",
+            name: "FancySliders",
             path: "Sources"
         ),
         .testTarget(
-            name: "xxPROJECTxNAMExxTests",
-            dependencies: ["xxPROJECTxNAMExx"],
+            name: "FancySlidersTests",
+            dependencies: ["FancySliders"],
             path: "Tests",
             exclude: ["CheckCocoaPodsQualityIndexes.rb"]
         )

@@ -2,7 +2,7 @@
 //  iOS_ExampleApp.swift
 //  iOS Example
 //
-//  Created by __AUTHOR NAME__ on __TODAYS_DATE__.
+//  Created by Ayoub on 5/9/2023.
 //
 
 import SwiftUI
