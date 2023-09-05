@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21F3EBF32AA7741D00C5F3FE /* FancySliders in Frameworks */ = {isa = PBXBuildFile; productRef = 21F3EBF22AA7741D00C5F3FE /* FancySliders */; };
 		D95C08B8277D8AA00016A10F /* iOS_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C08B7277D8AA00016A10F /* iOS_ExampleApp.swift */; };
 		D95C08BA277D8AA00016A10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C08B9277D8AA00016A10F /* ContentView.swift */; };
 		D95C08BC277D8AA20016A10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95C08BB277D8AA20016A10F /* Assets.xcassets */; };
 		D95C08BF277D8AA20016A10F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95C08BE277D8AA20016A10F /* Preview Assets.xcassets */; };
-		D95C08CA277D91270016A10F /* xxPROJECTxNAMExx in Frameworks */ = {isa = PBXBuildFile; productRef = D95C08C9277D91270016A10F /* xxPROJECTxNAMExx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95C08CA277D91270016A10F /* xxPROJECTxNAMExx in Frameworks */,
+				21F3EBF32AA7741D00C5F3FE /* FancySliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			);
 			name = "iOS Example";
 			packageProductDependencies = (
-				D95C08C9277D91270016A10F /* xxPROJECTxNAMExx */,
+				21F3EBF22AA7741D00C5F3FE /* FancySliders */,
 			);
 			productName = "iOS Example";
 			productReference = D95C08B4277D8AA00016A10F /* iOS Example.app */;
@@ -370,9 +370,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D95C08C9277D91270016A10F /* xxPROJECTxNAMExx */ = {
+		21F3EBF22AA7741D00C5F3FE /* FancySliders */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = xxPROJECTxNAMExx;
+			productName = FancySliders;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
