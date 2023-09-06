@@ -27,9 +27,11 @@ struct ContentView: View {
                 height: 58,
                 images: RatingImages(firstImage: "emoji-1", secondImage: "emoji-2", thirdImage: "emoji-3", fourthImage: "emoji-4", fifthImage: "emoji-5"),
                 content: {
-                    Capsule()
-                        .fill(.yellow)
-//                        .stroke(Color.yellow, lineWidth: 1.5)
+                    ZStack {
+                        Capsule().fill(.yellow)
+                        Text("Rate your experience!")
+                            .foregroundColor(.white)
+                    }
                 },
                 didRate: { value in
                     print("value === \(value)")
