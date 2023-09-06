@@ -22,14 +22,19 @@ import FancySliders
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .center) {
-            RatingView(width: UIScreen.main.bounds.width - 32, height: 50,
-                       images: RatingImages(firstImage: "emoji-1", secondImage: "emoji-2", thirdImage: "emoji-3", fourthImage: "emoji-4", fifthImage: "emoji-5"),
-                       content: {
-                Capsule().stroke(Color.yellow, lineWidth: 1.5)
-            },
-            didRate: { value in
-                print("value === \(value)")
-            })
+            RatingView (
+                width: UIScreen.main.bounds.width - 32,
+                height: 58,
+                images: RatingImages(firstImage: "emoji-1", secondImage: "emoji-2", thirdImage: "emoji-3", fourthImage: "emoji-4", fifthImage: "emoji-5"),
+                content: {
+                    Capsule()
+                        .fill(.yellow)
+//                        .stroke(Color.yellow, lineWidth: 1.5)
+                },
+                didRate: { value in
+                    print("value === \(value)")
+                }
+            )
         }
     }
 }

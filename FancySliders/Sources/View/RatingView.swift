@@ -44,7 +44,8 @@ public struct RatingView<Content: View>: View {
     let content: () -> Content
     private var rateItemList = [RateItem]()
     @State private var dragPoint = CGPoint(x: 0, y: 0)
-    @State private var icon: String = "emoji-1"
+    @State private var icon: String = ""
+    @State private var shimmerStatus: Bool = true
     
     public init(width: CGFloat, height: CGFloat, images: RatingImages, content: @escaping () -> Content, didRate: @escaping (Int) -> Void) {
         self.width = width
@@ -77,6 +78,7 @@ public struct RatingView<Content: View>: View {
             .overlay {
                 ZStack {
                     content()
+                    Shimmer(width: width, height: height, status: shimmerStatus)
                     Image(icon)
                         .resizable()
                         .frame(width: height - 5, height: height - 5)
@@ -85,6 +87,7 @@ public struct RatingView<Content: View>: View {
                     .gesture(
                         DragGesture()
                             .onChanged { value in
+                                if shimmerStatus { shimmerStatus = false }
                                 if value.location.x < width - height/2 && value.location.x > height/2 {
                                     dragPoint.x = value.location.x
                                     DispatchQueue.main.async {
@@ -105,6 +108,7 @@ public struct RatingView<Content: View>: View {
             }
             .onAppear {
                 self.dragPoint = CGPoint(x: height/2, y: height/2)
+                self.icon = images.getImageByValue(value: 1)
             }
     }
     
