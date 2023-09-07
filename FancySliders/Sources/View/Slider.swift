@@ -54,7 +54,7 @@ public struct Slider<Content: View, Thumbnail: View>: View {
                     content()
                     Shimmer(width: width, height: height, status: shimmerStatus)
                     thumbnail()
-                        .frame(width: height - 7, height: height - 7)
+                        .frame(width: height, height: height)
                         .position(x: dragPoint.x, y: dragPoint.y)
                         //.animation(.easeInOut, value: dragPoint)
                         .gesture(

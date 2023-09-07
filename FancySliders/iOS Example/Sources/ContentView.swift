@@ -38,9 +38,10 @@ struct ContentView: View {
                 }
             )
             
-            Slider(width: UIScreen.main.bounds.width - 32, height: 60, stepCount: 3) {
+            Slider(width: UIScreen.main.bounds.width - 32, height: 60, stepCount: 2) {
                 Circle()
                     .fill(.white)
+                    .padding(5)
                     .overlay {
                         Image(systemName: "arrow.forward")
                             .resizable()
@@ -48,7 +49,7 @@ struct ContentView: View {
                             .frame(width: 25)
                     }
             } content: {
-                Capsule().fill(.red)
+                Capsule().fill(.gray)
             } didComplete: { value in
                 print("step value: \(value)")
             }
