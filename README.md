@@ -1,5 +1,5 @@
 
-# Swift 5 Module Template
+# Fancy sliders
 Use this template as a starting point for any Swift 5 module that you want other people to include in their projects.
 
 **STATUS: This template is ready and works in production code, compatible with Xcode 13.1 (13A1030d)**
