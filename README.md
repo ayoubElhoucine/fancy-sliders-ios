@@ -1,11 +1,8 @@
-[![Build Status](https://travis-ci.org/fulldecent/swift5-module-template.svg?branch=master)](https://travis-ci.org/fulldecent/swift5-module-template)
 
 # Swift 5 Module Template
 Use this template as a starting point for any Swift 5 module that you want other people to include in their projects.
 
 **STATUS: This template is ready and works in production code, compatible with Xcode 13.1 (13A1030d)**
-
-![Swift 5 Module directory layout](https://user-images.githubusercontent.com/382183/66881876-63cca680-ef96-11e9-9dde-ae9d5c35350c.png)
 
 ## Features
 Your new Swift 5 module will immediately have working, compilable code, and all these features:
