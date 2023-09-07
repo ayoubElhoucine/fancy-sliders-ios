@@ -125,7 +125,7 @@ struct SwitchSliderEx: View {
                             .frame(width: 30)
                     }
             } didComplete: { value in
-                print("step value: \(value)")
+                print("Switch value: \(value)")
             }
             
             SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red) {
@@ -139,7 +139,7 @@ struct SwitchSliderEx: View {
                             .frame(width: 30)
                     }
             } didComplete: { value in
-                print("step value: \(value)")
+                print("Switch value: \(value)")
             }
         }
     }

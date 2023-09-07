@@ -1,21 +1,4 @@
-# ALMOST DONE :walking_woman: :running_woman: :biking_woman:
-
-Thank you for using Swift 5 Module Template. Before you release your awesome project to the world, complete the following steps.
-
-THIS LIST IS EASY, CHECK IT OFF ONE-BY-ONE BABY! ✔️ ✔️ ✔️
-
- - [ ] Open the project in Xcode and add features to xxPROJECTxNAMExx
- - [ ] Make sure you are using Swift 5 (Edit > Convert > To Current Swift Syntax…)
- - [ ] Fix all build errors and warnings, add tests (yes really)
- - [ ] Add a screenshot or AT LEAST some picture below in this README
- - [ ] Delete all this crap up here
- - [ ] Make one release (full steps are in [CONTRIBUTING.md] in case you forget)
-
-THEN YOU'RE DONE, GO STAR [swift5-module-template](https://github.com/fulldecent/swift5-module-template) FOR UPDATES.
-
-----
-
-# xxPROJECTxNAMExx
+# Fancy sliders
 
 [![CI Status](http://img.shields.io/travis/__GITHUB_USERNAME__/xxPROJECTxNAMExx.svg?style=flat)](https://travis-ci.org/__GITHUB_USERNAME__/xxPROJECTxNAMExx)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/__GITHUB_USERNAME__/xxPROJECTxNAMExx)
