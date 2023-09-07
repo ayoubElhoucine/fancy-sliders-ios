@@ -22,6 +22,21 @@ import FancySliders
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
+            
+            RatingSliderEx()
+            
+            StepsSliderEx()
+
+        }
+    }
+}
+
+struct RatingSliderEx: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Rating Slider example")
+                .fontWeight(.semibold)
+                .padding(.horizontal, 16)
             RatingSlider (
                 width: UIScreen.main.bounds.width - 32,
                 height: 58,
@@ -37,23 +52,54 @@ struct ContentView: View {
                     print("rate value: \(value)")
                 }
             )
-            
+        }
+    }
+}
+
+struct StepsSliderEx: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Slider with two steps")
+                .fontWeight(.semibold)
+                .padding(.horizontal, 16)
             Slider(width: UIScreen.main.bounds.width - 32, height: 60, stepCount: 2) {
+                Circle()
+                    .fill(.white)
+                    .padding(5)
+                    .overlay {
+                        Image(systemName: "trash.fill")
+                            .resizable()
+                            .foregroundColor(.red)
+                            .scaledToFit()
+                            .frame(width: 25)
+                    }
+            } content: {
+                Capsule().fill(Color.red.opacity(0.5))
+            } didComplete: { value in
+                print("step value: \(value)")
+            }
+            
+            Spacer().frame(height: 10)
+            
+            Text("Slider with four steps")
+                .fontWeight(.semibold)
+                .padding(.horizontal, 16)
+            Slider(width: UIScreen.main.bounds.width - 32, height: 60, stepCount: 4) {
                 Circle()
                     .fill(.white)
                     .padding(5)
                     .overlay {
                         Image(systemName: "arrow.forward")
                             .resizable()
+                            .foregroundColor(.black.opacity(0.8))
                             .scaledToFit()
                             .frame(width: 25)
                     }
             } content: {
-                Capsule().fill(.gray)
+                Capsule().fill(.gray.opacity(0.6))
             } didComplete: { value in
                 print("step value: \(value)")
             }
-
         }
     }
 }
