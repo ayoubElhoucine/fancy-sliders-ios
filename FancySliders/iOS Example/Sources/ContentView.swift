@@ -26,6 +26,8 @@ struct ContentView: View {
             RatingSliderEx()
             
             StepsSliderEx()
+            
+            SwitchSliderEx()
 
         }
     }
@@ -97,6 +99,31 @@ struct StepsSliderEx: View {
                     }
             } content: {
                 Capsule().fill(.gray.opacity(0.6))
+            } didComplete: { value in
+                print("step value: \(value)")
+            }
+        }
+    }
+}
+
+struct SwitchSliderEx: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Switch Slider")
+                .fontWeight(.semibold)
+                .padding(.horizontal, 16)
+            
+            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red) {
+                Circle()
+                    .fill(.white)
+                    .padding(6)
+                    .overlay {
+                        Image(systemName: "power")
+                            .resizable()
+                            .foregroundColor(.black.opacity(0.8))
+                            .scaledToFit()
+                            .frame(width: 30)
+                    }
             } didComplete: { value in
                 print("step value: \(value)")
             }
