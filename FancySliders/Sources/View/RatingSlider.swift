@@ -36,7 +36,7 @@ public struct RatingImages {
 }
 
 @available(iOS 15.0, *)
-public struct RatingView<Content: View>: View {
+public struct RatingSlider<Content: View>: View {
     let width: CGFloat
     let height: CGFloat
     let images: RatingImages

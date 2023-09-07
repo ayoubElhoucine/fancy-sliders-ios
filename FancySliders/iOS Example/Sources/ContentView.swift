@@ -21,8 +21,8 @@ import FancySliders
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            RatingView (
+        VStack(alignment: .center, spacing: 20) {
+            RatingSlider (
                 width: UIScreen.main.bounds.width - 32,
                 height: 58,
                 images: RatingImages(firstImage: "emoji-1", secondImage: "emoji-2", thirdImage: "emoji-3", fourthImage: "emoji-4", fifthImage: "emoji-5"),
@@ -34,9 +34,18 @@ struct ContentView: View {
                     }
                 },
                 didRate: { value in
-                    print("value === \(value)")
+                    print("rate value: \(value)")
                 }
             )
+            
+            Slider(width: UIScreen.main.bounds.width - 32, height: 60, stepCount: 3) {
+                Circle().fill(.red)
+            } content: {
+                Capsule().fill(.cyan)
+            } didComplete: { value in
+                print("step value: \(value)")
+            }
+
         }
     }
 }
