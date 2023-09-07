@@ -127,6 +127,20 @@ struct SwitchSliderEx: View {
             } didComplete: { value in
                 print("step value: \(value)")
             }
+            
+            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red) {
+                Circle()
+                    .fill(.clear)
+                    .overlay {
+                        Image(systemName: "power")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .scaledToFit()
+                            .frame(width: 30)
+                    }
+            } didComplete: { value in
+                print("step value: \(value)")
+            }
         }
     }
 }
