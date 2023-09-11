@@ -115,7 +115,7 @@ struct SwitchSliderEx: View {
                 .fontWeight(.semibold)
                 .padding(.horizontal, 16)
             
-            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red) {
+            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red.opacity(0.8)) {
                 Circle()
                     .fill(.white)
                     .padding(6)
@@ -130,7 +130,7 @@ struct SwitchSliderEx: View {
                 print("Switch value: \(value)")
             }
             
-            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red) {
+            SwitchSlider(width: UIScreen.main.bounds.width - 32, height: 80, title: "Switch On", titleColor: .white, colorOn: .green, colorOff: .red.opacity(0.8)) {
                 Circle()
                     .fill(.clear)
                     .overlay {
@@ -154,7 +154,7 @@ struct SliderToButtonEx: View {
                 .fontWeight(.semibold)
                 .padding(.horizontal, 16)
             
-            SliderToButton(width: UIScreen.main.bounds.width - 32, height: 80, title: "Slide to call", titleColor: .black, bgColor: .green.opacity(0.7), initialMode: .button) {
+            SliderToButton(width: UIScreen.main.bounds.width - 32, height: 80, title: "Slide to call", titleColor: .black, bgColor: .green.opacity(0.8), initialMode: .button) {
                 Circle()
                     .fill(.white)
                     .padding(6)

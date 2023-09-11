@@ -11,6 +11,8 @@ import SwiftUI
 @available(iOS 15.0, *)
 public struct SliderToButton<Thumbnail: View>: View {
     
+    @StateObject private var model = Model()
+    
     let width: CGFloat
     let height: CGFloat
     let title: String
@@ -20,8 +22,6 @@ public struct SliderToButton<Thumbnail: View>: View {
     let didFinishSliding: () -> Void
     let didClick: () -> Void
     let thumbnail: () -> Thumbnail
-    
-    @StateObject private var model = Model()
     
     public init(width: CGFloat, height: CGFloat, title: String, titleColor: Color, bgColor: Color, initialMode: Mode, thumbnail: @escaping () -> Thumbnail, didFinishSliding: @escaping () -> Void, didClick: @escaping () -> Void) {
         self.width = width
