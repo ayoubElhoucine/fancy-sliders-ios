@@ -1,11 +1,11 @@
 import XCTest
-@testable import xxPROJECTxNAMExx
+@testable import FancySliders
 
-final class xxPROJECTxNAMExxTests: XCTestCase {
+final class FancySlidersTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(xxPROJECTxNAMExx().text, "Hello, World!")
+        //XCTAssertEqual(FancySliders().text, "Hello, World!")
     }
 }

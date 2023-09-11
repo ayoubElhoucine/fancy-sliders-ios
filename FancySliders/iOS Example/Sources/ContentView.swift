@@ -28,6 +28,8 @@ struct ContentView: View {
             StepsSliderEx()
             
             SwitchSliderEx()
+            
+            SliderToButtonEx()
 
         }
     }
@@ -140,6 +142,34 @@ struct SwitchSliderEx: View {
                     }
             } didComplete: { value in
                 print("Switch value: \(value)")
+            }
+        }
+    }
+}
+
+struct SliderToButtonEx: View {
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Slider to button")
+                .fontWeight(.semibold)
+                .padding(.horizontal, 16)
+            
+            SliderToButton(width: UIScreen.main.bounds.width - 32, height: 80, title: "Slide to call", titleColor: .black, bgColor: .green.opacity(0.7), initialMode: .button) {
+                Circle()
+                    .fill(.white)
+                    .padding(6)
+                    .overlay {
+                        Image(systemName: "phone.fill")
+                            .resizable()
+                            .foregroundColor(.green)
+                            .scaledToFit()
+                            .frame(width: 30)
+                    }
+                
+            } didFinishSliding: {
+                print("Finish sliding !")
+            } didClick: {
+                print("did click !")
             }
         }
     }
